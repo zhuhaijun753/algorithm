@@ -5,7 +5,7 @@
 *            dp[i][k][1] = max(dp[i-1][k][1], dp[i-1][k-1][0] - price[i])
 *
 */
-/*由上述方程知需要构建三维数组，又因为最多只需要n/2次，所以空间复杂度为*/
+/*由上述方程知需要构建三维数组，又因为最多只需要n/2次，所以空间复杂度为O(n^2)*/
 class Solution {
 public:
     int maxProfit_inf(vector<int>& prices) {
