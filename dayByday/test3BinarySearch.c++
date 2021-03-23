@@ -7,21 +7,23 @@ using namespace std;
 bool check(vector<int> ans, long long  target, int m){
     long long weight = 0;
     int cnt = 1;
+    int temp = 0;
     int minW = 0x7ffffff, maxW = 0;
     for(int i = 0; i < ans.size(); i++){
         if(minW > ans[i] || maxW < ans[i]) {
             //最大最小值每一个变了，都要更新，这里写在一起了
             minW = min(minW, ans[i]);
             maxW = max(maxW, ans[i]);
-
             if (weight + (maxW - minW) > target) {
                 //开始下一组，并将maxW, minW初始化为新一组的起始值
                 minW = ans[i];
                 maxW = ans[i];
                 cnt++;
-            } else {
-                weight += maxW - minW;
+                //只在分组时加之前的权值
+                weight += temp;
             }
+            //记录上一个权值
+            temp = maxW - minW;
         }
     }
 
