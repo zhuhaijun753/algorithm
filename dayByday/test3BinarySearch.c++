@@ -19,7 +19,7 @@ bool check(vector<int> ans, long long  target, int m){
                 minW = ans[i];
                 maxW = ans[i];
                 cnt++;
-                //只在分组时加之前的权值
+                //只在分组时加之前的权值，避免重复累加
                 weight += temp;
             }
             //记录上一个权值
