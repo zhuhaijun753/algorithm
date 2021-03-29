@@ -9,3 +9,4 @@
 - Greedy
 - SlidingWindow
 
+`printf("Hello Algorithm!")`
