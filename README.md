@@ -1,3 +1,11 @@
 # algorithm
-simple problems on leecode
-,hope can be stronger
+## problems on leetcode, hope can be stronger
+### Including
+
+- day by day
+- BinarySearch
+- DP
+- Graph
+- Greedy
+- SlidingWindow
+
