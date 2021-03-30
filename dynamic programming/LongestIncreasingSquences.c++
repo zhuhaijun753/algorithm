@@ -15,3 +15,19 @@ public:
         return *max_element(dp.begin(), dp.end());
     }
 };
+
+//二分搜索
+//定义dp[i]: 长度为i+1的上升子序列中末尾元素的最小值(不存在则为INT_MAX)
+//O(nlogn)
+class Solution {
+public:
+    int lengthOfLIS(vector<int>& nums) {
+        int n = nums.size();
+        int dp[n];
+        fill(dp, dp+n, INT_MAX);
+        for(int i = 0; i < n; i++){
+            *lower_bound(dp, dp+n, nums[i]) = nums[i];
+        }
+        return lower_bound(dp, dp+n, INT_MAX) - dp;
+    }
+};
