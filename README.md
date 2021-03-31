@@ -8,5 +8,6 @@
 - Graph
 - Greedy
 - SlidingWindow
+- DSU
 
 `printf("Hello Algorithm!")`
