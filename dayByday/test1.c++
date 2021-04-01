@@ -12,6 +12,7 @@ void getPrime()
     {
         if(!flag[i])
         {
+            //a存储素数因子
             a[num++] = i;
         }
         for(int j = 0;j<num;j++)

@@ -1,5 +1,6 @@
 //单源最短路
 // Bellman-Ford算法
+// 可以判断负边，但是时间复杂度不如dijkstra，可以看到循环那里重复了许多操作
 struct edge {int from, to, cost;};
 
 edge es[MAX_E];
